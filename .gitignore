@@ -1,2 +1,5 @@
-#ignore vagrant folder
+# ignore vagrant folder
 .vagrant
+
+# ignore workspace folders
+workspace/*
