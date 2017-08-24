@@ -3,3 +3,6 @@
 
 # ignore workspace folders
 workspace/*
+
+# ignore boxes
+*.box

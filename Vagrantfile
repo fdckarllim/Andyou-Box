@@ -10,9 +10,12 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  # vagrant box name and url
+  # change this value to the name of your box
+  config.vm.box = "macheriev1"
+
+  # change this value to the url of your box
+  config.vm.box_url = "andyou.box" 
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
