@@ -29,7 +29,10 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./configurations/sites-available", "/etc/apache2/sites-available", create: true, owner: "www-data", group: "www-data", mount_options: ["dmode=775,fmode=775"]
 
   # run provisioning file on startup
+  # restart the apache server for use
   config.vm.provision "shell", inline: "sudo service apache2 restart", privileged: true, run: "always"
+
+  # automatically start the realtime application for broadcasting
   config.vm.provision "shell", inline: "cd /var/www/inn_realtime_api && nohup node ./bin/www  > /dev/null 2>&1 &", privileged: true, run: "always"
 
   # increase memory
