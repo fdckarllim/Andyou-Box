@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
 
   # run provisioning file on startup
   config.vm.provision "shell", inline: "sudo service apache2 restart", privileged: true, run: "always"
+  config.vm.provision "shell", inline: "cd /var/www/inn_realtime_api && nohup node ./bin/www  > /dev/null 2>&1 &", privileged: true, run: "always"
 
   # increase memory
   config.vm.provider :virtualbox do |v|
