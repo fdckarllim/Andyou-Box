@@ -1,5 +1,30 @@
+# add these hosts to your local machine
 192.168.33.10 inn-localhost.nativecamp.net
 192.168.33.10 inn-admin.nativecamp.net
 192.168.33.10 inn-variety.nativecamp.net
 192.168.33.10 inn-dm.nativecamp.net
 192.168.33.10 inn-mm.nativecamp.net
+
+# NOTE: if you want to add more virtual host names, do the following steps
+# 1. Add your virtual hosts information in the sites-available/andyou.conf file (https://github.com/lesterpadul/Andyou-Box/blob/master/configurations/sites-available/andyou.conf)
+
+# 2. Go to your vagrant machine by running it (if it's not yet enabled), and accessing it via SSH
+> vagrant up && vagrant ssh
+
+# 3. Add "127.0.0.1 custom-virtual-hostname.com" to your /etc/hosts
+> sudo vi /etc/hosts
+> add 127.0.0.1 custom-virtual-hostname.com
+> :wq!
+
+# 4. Add the new virtual host name in your local machine's hosts file
+# For Mac users
+> sudo vi /etc/hosts
+> add "192.168.33.10 custom-virtual-hostname.com"
+> :wq!
+
+# For Windows users
+> open C:\Windows\System32\drivers\etc\hosts with administrative privileges
+> add "192.168.33.10 custom-virtual-hostname.com"
+> exit
+
+# 5. Return to your vagrant box, and reload the apache2 server
