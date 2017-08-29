@@ -4,6 +4,7 @@
 192.168.33.10 inn-variety.nativecamp.net
 192.168.33.10 inn-dm.nativecamp.net
 192.168.33.10 inn-mm.nativecamp.net
+192.168.33.10 inn-realtime.nativecamp.net
 
 # NOTE: if you want to add more virtual host names, do the following steps
 # 1. Add your virtual hosts information in the sites-available/andyou.conf file (https://github.com/lesterpadul/Andyou-Box/blob/master/configurations/sites-available/andyou.conf)
