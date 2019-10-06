@@ -12,10 +12,10 @@ Vagrant.configure("2") do |config|
   
   # vagrant box name and url
   # change this value to the name of your box
-  config.vm.box = "macheriev1_2"
+  config.vm.box = "macheriev1_2_lester"
   
   # change this value to the url of your box
-  config.vm.box_url = "isai.box" 
+  config.vm.box_url = "lester.padu.bak.2019-10-06.box" 
   
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
